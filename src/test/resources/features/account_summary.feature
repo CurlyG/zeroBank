@@ -1,4 +1,4 @@
-
+@summary
 Feature: Account summary page
 
   Background: User is in the login page and logged in
@@ -6,37 +6,27 @@ Feature: Account summary page
     Then user is logged in
 
 
-  Scenario:Page should have title "Zero-Account summary"
-    When user goes to "Account summary" page
-    Then page title should be "Zero-Account summary"
+  Scenario:Account summary page should have title "Zero-Account summary"
+    When user navigates to Account summary page
+    Then page title should be Zero-Account summary
 
-    Scenario: Account summary page should have "Cash Accounts" type
-      When user goes to "Account summary" page
-      Then user should see "Cash Accounts" type
+    Scenario: Account summary page should have all account types
+      When user navigates to Account summary page
+      Then user verifies that account types are displayed
+      |Cash Accounts      |
+      |Investment Accounts|
+      |Credit Accounts    |
+      |Loan Accounts      |
 
-  Scenario: Account summary page should have "Investment Accounts" type
-    When user goes to "Account summary" page
-    Then user should see "Investment Accounts" type
 
-  Scenario: Account summary page should have "Credit Accounts" type
-    When user goes to "Account summary" page
-    Then user should see "Credit Accounts" type
+  Scenario: Credit account table should have all columns
+    When user navigates to Account summary page
+    Then user verifies that columns are displayed in Credit Accounts table
+    |Account|
+    |Credit Card|
+    |Balance    |
 
-  Scenario: Account summary page should have "Loan Accounts" type
-    When user goes to "Account summary" page
-    Then user should see "Loan Accounts" type
 
-  Scenario: Credit account table should have "Account" column
-    When user goes to "Account summary" page
-    Then user should see "Account" column in "Credit Accounts" table
-
-  Scenario: Credit account table should have "Credit Card" column
-    When user goes to "Account summary" page
-    Then user should see "Credit Card" column in "Credit Accounts" table
-
-  Scenario: Credit account table should have "Balance" column
-    When user goes to "Account summary" page
-    Then user should see "Balance" column in "Credit Accounts" table
 
 
 

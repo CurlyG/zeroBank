@@ -12,9 +12,15 @@ import org.junit.runner.RunWith;
         },
         features = "src/test/resources/features/",
         glue = "com/zerobank/stepdefinitions",  // it shows the path to the step definitions package
-        dryRun=false, //If dryRun is on/true → cucumber will not execute the java code.
+        dryRun=true, //If dryRun is on/true → cucumber will not execute the java code.
         // It will only check if the cucumber steps have matching step defs.
-         tags = "@wip"
+         tags = "@summary"
+
+
+        //@activity
+        //@summary
+        //@payBills
+        //@login
 
 )
 
