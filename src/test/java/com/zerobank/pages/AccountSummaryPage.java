@@ -7,7 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 
 import java.util.List;
 
-public class AccountSummaryPage {
+public class AccountSummaryPage extends BasePage{
 
     public AccountSummaryPage(){
         PageFactory.initElements(Driver.get(), this);

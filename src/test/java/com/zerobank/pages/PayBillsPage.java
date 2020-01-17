@@ -6,7 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class PayBillsPage {
+public class PayBillsPage extends BasePage{
     WebDriver driver;
     public PayBillsPage(){
         PageFactory.initElements(Driver.get(), this);

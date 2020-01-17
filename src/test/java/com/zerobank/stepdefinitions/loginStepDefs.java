@@ -43,8 +43,6 @@ public class loginStepDefs {
         String actualTitle=Driver.get().getTitle();
         Assert.assertEquals(actualTitle, "Zero - Account Summary");
 
-        //loginPage.usernameQuit.click();
-        //loginPage.logout.click();
     }
 
     @When("user logs with invalid credentials")

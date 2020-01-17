@@ -1,4 +1,4 @@
 package com.zerobank.pages;
 
-public class AddNewPayeePage {
+public class AddNewPayeePage extends BasePage{
 }

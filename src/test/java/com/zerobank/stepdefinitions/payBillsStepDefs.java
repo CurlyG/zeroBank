@@ -35,15 +35,10 @@ public class payBillsStepDefs {
     }
 
     @When("add description in Description box")
-    public void add_description_in_Description_box() {
-        payBillsPage.descriptionBox.sendKeys("Selenium is fun");
-
-    }
+    public void add_description_in_Description_box() { payBillsPage.descriptionBox.sendKeys("Selenium is fun");}
 
     @When("click Pay button")
-    public void click_Pay_button() {
-        payBillsPage.payButton.click();
-    }
+    public void click_Pay_button() { payBillsPage.payButton.click();}
 
     @Then("The payment was successfully submitted should be displayed")
     public void the_payment_was_successfully_submitted_should_be_displayed() {
@@ -52,18 +47,12 @@ public class payBillsStepDefs {
         Assert.assertEquals(actual, expected);
     }
 
-
-
     @When("user enters special characters in Amount box")
-    public void user_enters_special_characters_in_Amount_box() {
-        payBillsPage.amountBox.sendKeys("!@#");
-    }
+    public void user_enters_special_characters_in_Amount_box() { payBillsPage.amountBox.sendKeys("!@#"); }
 
 
     @When("user enters alphabetic characters in Amount box")
-    public void user_enters_alphabetic_characters_in_Amount_box() {
-        payBillsPage.amountBox.sendKeys("123");
-    }
+    public void user_enters_alphabetic_characters_in_Amount_box() {payBillsPage.amountBox.sendKeys("123");}
 
     @Then("Amount field should not accept it")
     public void amount_field_should_not_accept_it() {
