@@ -1,4 +1,4 @@
-@summary
+@summary @regression
 Feature: Account summary page
 
 Background:

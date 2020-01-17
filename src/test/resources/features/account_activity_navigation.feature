@@ -1,4 +1,4 @@
-@activity_navigation
+@activity_navigation @regression
   Feature: Navigating to specific accounts in Accounts Activity
 
     Background:

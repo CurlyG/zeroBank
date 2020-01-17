@@ -1,4 +1,4 @@
-@find_transaction
+@find_transaction @regression
   Feature: Find transaction in Account Activity
 
     Background:

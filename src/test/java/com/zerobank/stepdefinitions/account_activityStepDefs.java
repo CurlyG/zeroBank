@@ -62,6 +62,8 @@ public class account_activityStepDefs {
             accountActivityTableNames.add(accountActivityTableValue.getText());
         }
 
+        System.out.println(accountActivityTableNames.toString());
+
         Assert.assertEquals(accountActivityTableNames.toString(), "[Date, Description, Deposit, Withdrawal]");
 
 

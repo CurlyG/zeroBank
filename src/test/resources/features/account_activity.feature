@@ -1,4 +1,4 @@
-@activity
+@activity @regression
 Feature: Account Activity Page
 
   Background:

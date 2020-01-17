@@ -1,4 +1,4 @@
-@payBills
+@payBills @regression
   Feature: PayBills
 
     Background: User is in the login page and logged in
