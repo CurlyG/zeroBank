@@ -1,15 +1,17 @@
 @summary
 Feature: Account summary page
 
-  Background: User is in the login page and logged in
-    Given the user is on the login page
-    Then user is logged in
+Background:
+  Given the user is on the login page
+  When user logs with valid credentials
+  Then Account summary page should be displayed
 
-
-  Scenario:Account summary page should have title "Zero-Account summary"
+@step1
+  Scenario:Account summary page should have title "Zero-Account Summary"
     When user navigates to Account summary page
     Then page title should be Zero-Account summary
 
+  @step2
     Scenario: Account summary page should have all account types
       When user navigates to Account summary page
       Then user verifies that account types are displayed
@@ -18,7 +20,7 @@ Feature: Account summary page
       |Credit Accounts    |
       |Loan Accounts      |
 
-
+  @step3
   Scenario: Credit account table should have all columns
     When user navigates to Account summary page
     Then user verifies that columns are displayed in Credit Accounts table

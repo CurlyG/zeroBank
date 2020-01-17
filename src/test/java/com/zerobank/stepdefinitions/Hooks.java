@@ -2,8 +2,8 @@ package com.zerobank.stepdefinitions;
 
 import com.zerobank.utilities.Driver;
 import io.cucumber.core.api.Scenario;
-import org.junit.After;
-import org.junit.Before;
+import io.cucumber.java.After;
+import io.cucumber.java.Before;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 
@@ -13,19 +13,19 @@ public class Hooks {
 
     @Before
     public void setUp(){
+        Driver.get().manage().window().maximize();
         Driver.get().manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 
     }
 
-    @After
-    public void teatDown(Scenario scenario){
-        if(scenario.isFailed()){
-            final byte [] screenshoot=((TakesScreenshot) Driver.get()).getScreenshotAs(OutputType.BYTES);
-            scenario.embed(screenshoot,"image/png");
-
+    @After // run after scenario
+    public void tearDown(Scenario scenario) {
+        // if scenario fails, take a screenshot
+        if (scenario.isFailed()) {
+            final byte[] screenshot = ((TakesScreenshot) Driver.get()).getScreenshotAs(OutputType.BYTES);
+            scenario.embed(screenshot, "image/png");
         }
         Driver.closeDriver();
-
     }
 
 

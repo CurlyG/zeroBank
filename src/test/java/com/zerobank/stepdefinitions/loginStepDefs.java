@@ -19,8 +19,9 @@ public class loginStepDefs {
         String url= ConfigurationReader.get("url");
         Driver.get().get(url);
         BrowserUtils.waitForClickablility(By.id("signin_button"), 5);
-        loginPage.signIn.click();
-        Thread.sleep(3000);
+       loginPage.signIn.click();
+        BrowserUtils.waitFor(5);
+
         String actualTitle=Driver.get().getTitle();
         Assert.assertEquals(actualTitle,"Zero - Log in");
     }
@@ -41,6 +42,9 @@ public class loginStepDefs {
     public void account_summary_page_should_be_displayed() {
         String actualTitle=Driver.get().getTitle();
         Assert.assertEquals(actualTitle, "Zero - Account Summary");
+
+        //loginPage.usernameQuit.click();
+        //loginPage.logout.click();
     }
 
     @When("user logs with invalid credentials")

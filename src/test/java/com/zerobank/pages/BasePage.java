@@ -10,6 +10,12 @@ public abstract class BasePage {
         PageFactory.initElements(Driver.get(), this);
     }
 
+    @FindBy(partialLinkText="username")
+    public WebElement usernameQuit;
+
+    @FindBy(partialLinkText="Logout")
+    public WebElement logout;
+
 
 
 
