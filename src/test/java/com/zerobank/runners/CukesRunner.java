@@ -14,7 +14,7 @@ import org.junit.runner.RunWith;
         glue = "com/zerobank/stepdefinitions",  // it shows the path to the step definitions package
         dryRun=false, //If dryRun is on/true → cucumber will not execute the java code.
         // It will only check if the cucumber steps have matching step defs.
-         tags = "@regression"
+         tags = "@wip"
 
 
         //@activity

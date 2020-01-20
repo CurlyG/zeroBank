@@ -7,7 +7,7 @@ Feature: Account Activity Page
     Then Account summary page should be displayed
 
 
-    @step1
+    @step1 @wip
   Scenario:Account Activity page should have title "Zero-Account activity"
     When user navigates to Account Activity page
     Then page title should be Zero-Account activity

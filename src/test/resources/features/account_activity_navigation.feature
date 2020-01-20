@@ -6,6 +6,7 @@
       When user logs with valid credentials
       Then Account summary page should be displayed
 
+    @wip
     Scenario: Savings account redirect
       When user navigates to Account summary page
       And user clicks on Savings link
