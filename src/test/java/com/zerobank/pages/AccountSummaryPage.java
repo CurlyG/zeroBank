@@ -19,7 +19,7 @@ public class AccountSummaryPage extends BasePage{
     @FindBy(xpath = "//div[@class='offset2 span8']/h2")
     public List<WebElement> AccountTypes;
 
-    @FindBy(xpath = "//h2[text()='Credit Accounts']/following-sibling::div[@class='board'][1]/div/table/thead/tr/th")
+    @FindBy( xpath = "//h2[text()='Credit Accounts']/following-sibling::div[@class='board'][1]/div/table/thead/tr/th")
     public List<WebElement> AccountColumn;
 
 
